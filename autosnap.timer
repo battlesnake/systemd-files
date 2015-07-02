@@ -1,0 +1,9 @@
+[Unit]
+Description=Periodically snapshot important BTRFS subvolumes
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target

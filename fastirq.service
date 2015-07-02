@@ -1,0 +1,11 @@
+[Unit]
+Description=Increase interrupt frequency
+
+[Service]
+Type=oneshot
+Environment="PATH=/root/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
+ExecStart=/usr/bin/bash /root/bin/fastirq 2048
+ExecStop=/usr/bin/bash /root/bin/fastirq 256
+
+[Install]
+WantedBy=basic.target

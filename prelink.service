@@ -1,0 +1,7 @@
+[Unit]
+Description=Prelink
+After=basic.target mnt-hdd.mount
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/prelink -a

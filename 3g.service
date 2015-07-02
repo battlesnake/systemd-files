@@ -1,0 +1,11 @@
+[Unit]
+Description=Connect to 3g
+#After=remote-fs.target
+#After=syslog.target
+BindsTo=dev-ttyUSB0.device
+After=dev-ttyUSB0.device
+
+[Service]
+Type=simple
+Environment="PATH=/root/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
+ExecStart=/usr/bin/bash /root/bin/connect-3g

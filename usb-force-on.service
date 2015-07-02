@@ -1,0 +1,11 @@
+[Unit]
+Description=Disable USB power saving
+After=multi-user.target suspend.target
+
+[Service]
+Type=simple
+Environment="PATH=/root/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
+ExecStart=/root/bin/usb-force-on reset
+
+[Install]
+WantedBy=multi-user.target

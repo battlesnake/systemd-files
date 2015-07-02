@@ -1,0 +1,9 @@
+[Unit]
+Description=Local npm cache
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /usr/lib/node_modules/npm_lazy/bin/npm_lazy -c /etc/npm_lazy.js
+
+[Install]
+WantedBy=multi-user.target

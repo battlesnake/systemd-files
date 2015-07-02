@@ -1,0 +1,12 @@
+[Unit]
+Description=Create access point and route through ppp0
+After=network.target 3g.service
+
+[Service]
+Type=simple
+Environment="PATH=/root/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
+ExecStart=/usr/bin/bash /root/bin/wifi-ap "ppp0"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,7 @@
+[Unit]
+Description=Snapshot important BTRFS subvolumes
+After=basic.target mnt-hdd.mount
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash /mnt/hdd/create-snapshot.sh "auto"

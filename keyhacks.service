@@ -1,0 +1,11 @@
+[Unit]
+Description=Keyboard remappings
+After=basic.target
+
+[Service]
+Type=simple
+Environment="PATH=/root/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
+ExecStart=/usr/bin/bash /root/bin/keyhacks
+
+[Install]
+WantedBy=multi-user.target

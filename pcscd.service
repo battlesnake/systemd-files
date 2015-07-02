@@ -1,0 +1,10 @@
+[Unit]
+Description=pcsc daemon
+Wants=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/pcscd -f
+
+[Install]
+WantedBy=multi-user.target
